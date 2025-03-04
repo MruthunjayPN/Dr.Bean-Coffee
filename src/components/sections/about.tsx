@@ -10,7 +10,7 @@ export function About() {
           variants={staggerContainer}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: true, amount: 0.25 }}
+          viewport={{ amount: 0.5 }}
           className="text-center mb-16"
         >
           <motion.h2

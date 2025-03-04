@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { motion, useScroll, useSpring } from 'framer-motion';
 import { ThemeProvider } from '@/components/ui/theme-provider';
-import { Navbar } from '@/components/layout/navbar';
+import { SideNav } from '@/components/layout/side-nav';
 import { Hero } from '@/components/sections/hero';
 import { About } from '@/components/sections/about';
 import { CoffeeDocs } from '@/components/sections/coffee-docs';
@@ -11,7 +11,7 @@ import { Menu } from '@/components/sections/menu';
 import { Contact } from '@/components/sections/contact';
 import { Footer } from '@/components/layout/footer';
 import { Toaster } from '@/components/ui/toaster';
-import { SocialSidebar } from '@/components/layout/social-sidebar';
+import { Header } from '@/components/layout/header';
 
 function App() {
   const { scrollYProgress } = useScroll();
@@ -42,16 +42,16 @@ function App() {
 
   return (
     <ThemeProvider defaultTheme="light">
-      <div className="relative">
+      <div className="relative h-auto">
         {/* Progress Bar */}
         <motion.div
           className="fixed top-0 left-0 right-0 h-1 bg-primary z-50 origin-left"
           style={{ scaleX }}
         />
         
-        <Navbar />
-        <SocialSidebar />
-        <main>
+        <Header />
+        <SideNav />
+        <main className="min-h-screen">
           <Hero />
           <About />
           <CoffeeDocs />
