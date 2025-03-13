@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { useTheme } from '@/components/ui/theme-provider';
 import { Moon, ShoppingBag, Sun } from 'lucide-react';
