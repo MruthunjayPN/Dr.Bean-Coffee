@@ -8,7 +8,10 @@ export function Menu() {
   const renderMenuItems = (category: keyof typeof menuItems) => (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       {menuItems[category].map((item) => (
-        <Card key={item.name} className="bg-background shadow-md rounded-lg p-6">
+        <Card 
+          key={item.name} 
+          className="bg-background shadow-md rounded-lg p-6 transition-all duration-300 hover:scale-110 hover:shadow-xl relative z-10 hover:z-20"
+        >
           <CardHeader>
             <CardTitle className="flex justify-between items-center">
               <span>{item.name}</span>

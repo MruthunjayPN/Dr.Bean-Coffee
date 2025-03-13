@@ -4,7 +4,9 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { MapPin, Phone, Mail, Clock, Instagram, Twitter, Facebook } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock } from 'lucide-react';
+import { FaFacebook, FaInstagram } from 'react-icons/fa';
+import {FaXTwitter } from "react-icons/fa6"
 
 export function Contact() {
   return (
@@ -151,14 +153,15 @@ export function Contact() {
               <CardContent>
                 <div className="flex gap-4">
                   <Button variant="outline" size="icon" className="rounded-full">
-                    <Instagram className="h-5 w-5" />
+                    <FaInstagram className="h-5 w-5" />
                   </Button>
                   <Button variant="outline" size="icon" className="rounded-full">
-                    <Twitter className="h-5 w-5" />
+                    <FaFacebook className="h-5 w-5" />
                   </Button>
-                  <Button variant="outline" size="icon" className="rounded-full">
-                    <Facebook className="h-5 w-5" />
-                  </Button>
+                  <a href='https://x.com/MyDevTrail' target="_blank" className='flex items-center'>
+                    <FaXTwitter  className="h-5 w-5"/>
+                    <span className="ml-2 text-sm font-normal">Mruthunjay</span>
+                  </a>
                 </div>
               </CardContent>
             </Card>

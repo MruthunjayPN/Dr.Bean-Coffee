@@ -7,12 +7,12 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { Menu, X, Home, Info, Coffee, ShoppingCart, MapPin, UtensilsCrossed, Mail } from 'lucide-react';
+import { Menu, X, Home, Info, ShoppingCart, MapPin, UtensilsCrossed, Mail, LucideBookOpen } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const navLinks = [
   { name: 'Home', href: '#home', icon: Home },
   { name: 'About', href: '#about', icon: Info },
-  { name: 'Coffee Docs', href: '#coffee-docs', icon: Coffee },
   { name: 'Products', href: '#products', icon: ShoppingCart },
   { name: 'Locations', href: '#locations', icon: MapPin },
   { name: 'Menu', href: '#menu', icon: UtensilsCrossed },
@@ -94,6 +94,32 @@ export function SideNav() {
                       </TooltipContent>
                     </Tooltip>
                   ))}
+
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <motion.div
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.95 }}
+                      >
+                        <Link
+                          to="/coffee-guide"
+                          onClick={() => setIsOpen(false)}
+                          className="block"
+                        >
+                          <Button
+                            variant="ghost"
+                            size="icon"
+                            className="w-10 h-10"
+                          >
+                            <LucideBookOpen className="h-5 w-5" />
+                          </Button>
+                        </Link>
+                      </motion.div>
+                    </TooltipTrigger>
+                    <TooltipContent side="left">
+                      <p>Coffee Guide</p>
+                    </TooltipContent>
+                  </Tooltip>
                 </nav>
               </TooltipProvider>
             </motion.div>

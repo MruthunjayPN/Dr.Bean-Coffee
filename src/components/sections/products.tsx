@@ -21,7 +21,7 @@ const products = [
     name: 'Ethiopian Single Origin',
     description: 'Bright and fruity with distinctive blueberry notes and a clean finish.',
     price: 16.99,
-    image: 'https://images.unsplash.com/photo-1559525839-d9d1df7cb6b9?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80',
+    image: 'https://cdn.shopify.com/s/files/1/1475/5488/files/ethiopia-12oz-front.jpg?v=1701785594',
     category: 'beans',
     rating: 4.7
   },
